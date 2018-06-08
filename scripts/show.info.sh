@@ -33,6 +33,7 @@ show_info () {
 	echo "# SSD: 30 GB                                                                          #"
 	echo "#                                                                                     #"
 	echo "# OS: Ubuntu 16.04 64-bit Standard Installation                                       #"
+	echo "# OS: Ubuntu 18.04 64-bit Standard Installation                                       #"
 	echo "# OS: Debian 8 64-bit Standard Installation                                           #"
 	echo "# OS: Debian 9 64-bit Standard Installation                                           #"
 	echo "#                                                                                     #"
