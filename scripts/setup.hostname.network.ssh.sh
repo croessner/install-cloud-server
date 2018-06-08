@@ -304,8 +304,15 @@ setup_hostname_network_ssh () {
 					;;
 				esac
 				;;
-			*)
-				patch /etc/ssh/sshd_config ${PATCH_DIR}/etc.ssh.sshd_config.patch
+			Ubuntu)
+				case ${DIST_RELEASE} in
+				16.04)
+					patch /etc/ssh/sshd_config ${PATCH_DIR}/etc.ssh.sshd_config.patch
+					;;
+				18.04)
+					patch /etc/ssh/sshd_config ${PATCH_DIR}/etc.ssh.sshd_config.debian9.patch
+					;;
+				esac
 				;;
 			esac
 
