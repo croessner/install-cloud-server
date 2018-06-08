@@ -52,8 +52,15 @@ setup_base_software () {
 
 		case ${DIST_ID} in
 		Ubuntu)
-			apt-get install ntp ntp-doc update-notifier-common -y
-			/usr/lib/update-notifier/update-motd-updates-available --force
+			case ${DIST_RELEASE} in
+			16.04)
+				apt-get install ntp ntp-doc update-notifier-common -y
+				/usr/lib/update-notifier/update-motd-updates-available --force
+				;;
+			18.04)
+				apt-get install ntp ntp-doc unattended-upgrades apt-listchanges -y
+				;;
+			esac
 			;;
 		Debian)
 			case ${DIST_RELEASE} in
