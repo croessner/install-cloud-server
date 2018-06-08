@@ -24,7 +24,8 @@ test_os_release () {
 	case ${DIST_ID} in
 	Ubuntu)
 		case ${DIST_RELEASE} in
-		16.04)
+		16.04 | \
+		18.04)
 			SUPPORTED="1"
 			;;
 		*)
