@@ -64,6 +64,7 @@ test_os_release () {
 		echo "#        At the moment the following systems are supported."
 		echo "#"
 		echo "#        Ubuntu 16.04.* xenial"
+		echo "#        Ubuntu 18.04.* bionic"
 		echo "#        Debian 8.* jessie"
 		echo "#        Debian 9.* stretch"
 		echo "#"
