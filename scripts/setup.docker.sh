@@ -50,7 +50,21 @@ setup_docker () {
 	
 		curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | apt-key add -
 
-		add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") $(lsb_release -cs) stable"
+		case ${DIST_ID} in
+		Ubuntu)
+			case ${DIST_RELEASE} in
+			18.04)
+				add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") $(lsb_release -cs) stable edge"
+				;;
+			*)
+				add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") $(lsb_release -cs) stable"
+				;;
+			esac
+			;;
+		Debian)
+			add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") $(lsb_release -cs) stable"
+			;;
+		esac
 
 		apt-get update
 		apt-get -y install docker-ce
