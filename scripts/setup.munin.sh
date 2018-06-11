@@ -74,7 +74,14 @@ setup_munin () {
 				;;
 			esac
 			;;
-		*)
+		Ubuntu)
+			case ${DIST_RELEASE} in
+			18.04)
+				wget https://github.com/munin-monitoring/contrib/raw/master/plugins/chrony/chrony
+				/bin/mv chrony /usr/share/munin/plugins/
+				chmod 755 /usr/share/munin/plugins/chrony
+				;;
+			esac
 			;;
 		esac
 
