@@ -58,7 +58,7 @@ setup_base_software () {
 				/usr/lib/update-notifier/update-motd-updates-available --force
 				;;
 			18.04)
-				apt-get install ntp ntp-doc unattended-upgrades apt-listchanges -y
+				apt-get install chrony unattended-upgrades apt-listchanges -y
 				;;
 			esac
 			;;
