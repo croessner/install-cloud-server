@@ -15,7 +15,7 @@
  # unixsocket /var/run/redis/redis-server.sock
  # unixsocketperm 700
 +unixsocket /var/run/redis/redis-server.sock
-+unixsocketperm 700
++unixsocketperm 770
  
  # Close the connection after a client is idle for N seconds (0 to disable)
  timeout 0
