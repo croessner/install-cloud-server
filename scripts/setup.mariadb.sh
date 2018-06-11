@@ -54,7 +54,8 @@ setup_mariadb () {
 			case ${DIST_ID} in
 			Ubuntu)
 				case ${DIST_RELEASE} in
-				16.04)
+				16.04 | \
+				18.04)
 					apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
 					;;
 				*)
@@ -167,7 +168,8 @@ setup_mariadb () {
 			case ${DIST_ID} in
 			Ubuntu)
 				case ${DIST_RELEASE} in
-				16.04)
+				16.04 | \
+				18.04)
 					apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
 					;;
 				*)
