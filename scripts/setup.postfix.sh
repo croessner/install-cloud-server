@@ -26,7 +26,7 @@ setup_postfix () {
 		echo
 		echo "#######################################################################################"
 		echo "#"
-		echo "# Set a e-mail redirection for the root user."
+		echo "# Set an e-mail redirection for the root user."
 		echo "# Change postfix configuration to use tls and a smtp relay."
 		echo "# See configuration in file"
 		echo "# ${CONFIG_DIR}/postfix.sh"
