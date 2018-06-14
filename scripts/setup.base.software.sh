@@ -59,6 +59,7 @@ setup_base_software () {
 				;;
 			18.04)
 				apt-get install chrony unattended-upgrades apt-listchanges -y
+				dpkg-reconfigure -plow unattended-upgrades
 				;;
 			esac
 			;;
